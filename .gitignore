@@ -1,0 +1,4 @@
+node_modules/
+*.json
+prettierrc.txt
+stylelint.config.js
