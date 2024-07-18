@@ -1,1 +1,1 @@
-https://github.com/yandex-praktikum/zakrivayuschiy-teg-f
+https://yakovlevusinsk.github.io/zakrivayuschiy-teg-f/
