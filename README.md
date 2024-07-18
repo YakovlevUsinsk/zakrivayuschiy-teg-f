@@ -1,1 +1,1 @@
-https://yakovlevusinsk.github.io/zakrivayuschiy-teg-f/
+<https://yakovlevusinsk.github.io/zakrivayuschiy-teg-f>
