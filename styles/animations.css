@@ -21,7 +21,8 @@
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
   animation-direction: reverse;
-  position: relative;
+  position: absolute;
+  transform: translateX(-20px);
 }
 
 .like-icon.is-liked .heart {
