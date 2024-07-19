@@ -32,6 +32,7 @@
   background-attachment: fixed;
   font-family: var(--font-family), fantasy;
   color: var(--color-text-page);
+  font-variation-settings: "wght" var(--font-weight-text);
 }
 
 .page__header {
@@ -177,6 +178,7 @@
   display: inline-block;
   position: absolute;
   z-index: 2;
+  opacity: 0.5;
   inset-block-start: 25px;
   inset-inline-end: clamp(
     13px,
@@ -207,11 +209,12 @@
 }
 
 .post-title {
-  margin: 3px auto 3px 10px;
+  padding: 3px 0 3px 10px;
   font-family: var(--font-family-post), sans-serif;
   font-size: 18px;
   line-height: 21.78px;
   font-variation-settings: "wght" var(--font-weight-post-title);
+  border-block-end: 2px solid var(--color-theme-accent);
 }
 
 .img-card {
@@ -219,7 +222,8 @@
 }
 
 .text-block {
-  margin: 27px 25px 0;
+  padding: 27px 25px 0;
+  border-block-start: 2px solid var(--color-theme-accent);
   display: flex;
   flex-direction: column;
   row-gap: 27px;
@@ -228,7 +232,6 @@
 .text {
   font-family: var(--font-family-post), sans-serif;
   font-size: 18px;
-  font-variation-settings: "wght" var(--font-weight-text);
   line-height: calc(21 / 18);
   text-align: left;
 }
@@ -237,21 +240,13 @@
   margin: 25px 25px 25px auto;
   display: flex;
   justify-content: end;
-  column-gap: 12px;
+  column-gap: 6px;
   align-items: center;
 }
 
 .card__like-button {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   inline-size: 130px;
   block-size: 38px;
-  background-color: var(--btn-color-bg);
-  padding: 0;
-  border: 2px solid var(--color-theme-accent);
-  overflow: hidden;
 }
 
 .card__like-button:focus {
@@ -261,6 +256,17 @@
 .card__like-button:focus-visible {
   box-shadow: 2px 2px 0 0 var(--color-theme-accent);
   transition: box-shadow 0.3s ease;
+}
+
+.decor-curtain {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--btn-color-bg);
+  padding: 0;
+  border: 2px solid var(--color-theme-accent);
+  overflow: hidden;
 }
 
 .decor-curtain::before {
@@ -378,14 +384,6 @@
 }
 
 .footer__button {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: var(--btn-color-bg);
-  padding: 0;
-  border: 2px solid var(--color-theme-accent);
-  overflow: hidden;
   gap: 8px;
   min-inline-size: clamp(
     306px,
@@ -438,6 +436,7 @@
   max-inline-size: 39px;
   max-block-size: 39px;
   margin-inline-end: 20px;
+  align-self: center;
 }
 
 .dialog-content__text {
@@ -450,13 +449,8 @@
 }
 
 .dialog-button {
-  position: relative;
-  overflow: hidden;
   inline-size: 100%;
   min-block-size: 38px;
-  background-color: var(--btn-color-bg);
-  padding: 0;
-  border: 2px solid var(--color-theme-accent);
   text-transform: uppercase;
 }
 
@@ -500,7 +494,7 @@
 @media (width <= 765px) {
 
   .post-title {
-    margin: 4px 10px 6px;
+    padding: 3px 10px 2px;
   }
 
   .footer__button {
@@ -508,5 +502,15 @@
     margin-block-start: 52px;
     margin-block-end: 100px;
     min-block-size: 84px;
+  }
+
+  .footer__button .svg-disk {
+    max-inline-size: 28px;
+    max-block-size: 28px;
+  }
+
+  .dialog[open] {
+    max-inline-size: calc((341 / 375) * 100%);
+    padding: 30px 40px;
   }
 }
